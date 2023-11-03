@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#include "functions.hpp"
+#include "funtions.hpp"
 using namespace std;
 
 FlappyBird::FlappyBird() {
@@ -57,4 +57,16 @@ void FlappyBird::events() {
 
 void FlappyBird::draw() {
     window->clear(sf::Color::Black);
+    window->draw(*background);
+    window->draw(*pipeBottom);
+    window->draw(*pipeTop);
+    window->draw(*bird);
+    window->display();
+}
+
+void FlappyBird::run() {
+    while (window->isOpen()) {
+        events();
+        draw();
+    }
 }

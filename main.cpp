@@ -1,6 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
+#include "funtions.hpp"
 
 int main() {
-    cout << "hello world!\n";
+    auto flappy = make_shared<FlappyBird>();
+    flappy->run();
+
+    return 0;
 }
